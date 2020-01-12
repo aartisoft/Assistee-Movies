@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailActivity"
+    android:background="#e0e0e0">
+    <ImageView
+        android:id="@+id/backdropDetail"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:src="@drawable/man2"
+        android:scaleType="center"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="175dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="400dp"
+                                android:background="#ffff"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="25dp"
+                                android:layout_marginBottom="75dp">
+
+                                <TextView
+                                    android:id="@+id/titleDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="155dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Avengers Infinity war"
+                                    android:textColor="#000"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/dateDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="155dp"
+                                    android:layout_marginTop="30dp"
+                                    android:text="18-10-2003" />
+
+                                <RatingBar
+                                    android:id="@+id/ratingBarDetail"
+                                    style="@style/Widget.AppCompat.RatingBar.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="155dp"
+                                    android:layout_marginTop="50dp"
+                                    android:rating="5" />
+
+                                <TextView
+                                    android:id="@+id/descDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="155dp"
+                                    android:layout_marginTop="75dp"
+                                    android:maxLines="5"
+                                    android:text="This is a UI for an entertainment app, in which you can view new movies and series, check news, scores and reviews, and buy tickets for new releases near you." />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="170dp"
+                                    android:text="People"
+                                    android:textStyle="bold" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvDetail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="195dp"
+                                    android:orientation="horizontal"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:listitem="@layout/item_detail" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="285dp"
+                                    android:text="Release Date"
+                                    android:textStyle="bold" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv2Detail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="310dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:orientation="horizontal"
+                                    android:layout_marginStart="16dp"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:listitem="@layout/item_date" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv3Detail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="335dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginStart="16dp"
+                                    android:orientation="horizontal"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:listitem="@layout/item_date" />
+                            </androidx.cardview.widget.CardView>
+
+                        </FrameLayout>
+
+                        <com.jcminarro.roundkornerlayout.RoundKornerFrameLayout
+                            android:layout_width="130dp"
+                            android:layout_height="200dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="130dp"
+                            android:layout_marginEnd="198dp"
+                            android:background="@color/colorPrimary"
+                            android:elevation="20dp"
+                            app:corner_radius="10dp">
+
+                            <ImageView
+                                android:id="@+id/posterDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/man2" />
+
+                        </com.jcminarro.roundkornerlayout.RoundKornerFrameLayout>
+
+                        <Button
+                            android:layout_width="165dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="550dp"
+                            android:background="@drawable/bg_button2"
+                            android:text="CLICK ME"
+                            android:textColor="#fff" />
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="160dp"
+                android:layout_gravity="bottom">
+                <com.jcminarro.roundkornerlayout.RoundKornerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg"
+                    android:layout_gravity="bottom">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom">
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_button"
+                            android:layout_marginTop="20dp"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv4Detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="2"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
+                            tools:listitem="@layout/item"/>
+                    </RelativeLayout>
+                </com.jcminarro.roundkornerlayout.RoundKornerFrameLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
